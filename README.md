@@ -23,7 +23,7 @@ o Unit testing is an important part of maintaining system quality, stability and
 • Code Freezes should seek to limit changes to branches after validation.
 • Code Reviews will seek to enforce the previously mentioned constraints.
 
-#Initial Scope
+# initial scope
 • Usage of Interfaces and through their implementations, are paramount, to simplifying future upgrades and to the current performance of the systems execution.   
 • Unit testing compliance and code coverage threshold of no less than 80% will ensure future changes have less potential for a negative impact to the DC and for re-verification of completeness to spec / regression testing to be performed more thoroughly and quickly as compared to manually.
 • Business or Domain Logic will be stored in a “Business Logic Layer” separated from Data Access the Service Layer or any future Presentation Layer.  In this way, we can provide for separation of concerns with implementations or “layers of the system”.

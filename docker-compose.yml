@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  matthew.vandergrift.technical.screening:
+    image: matthew.vandergrift.technical.screening
+    build:
+      context: .\Matthew.Vandergrift.Technical.Screening
+      dockerfile: Dockerfile

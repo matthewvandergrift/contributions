@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
 {
@@ -8,17 +9,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
         //Had one today.Looked like problems for 10 year olds or I didn't get what they were looking for. 
         //(1) A function to compute minimum of unsorted numbers in an array of size N. this is a simple loop to find the min.How many times the assignment is executed?
         //(2) Find and fix the bugs - this function is to remove head of a singly linked list.
-
-        //void RemoveHead(node* head)
-        //{
-        //    free(head);
-        //    head = head->next;
-        //}
         //(3) Design a printserver. (there were some criteria)
-
-        //- Bad_MoFo June 21, 2014 | Flag
-
-        
 
 
         public long Divide2IntegersWithoutOperators()
@@ -26,7 +17,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
             return 0;
         }
 
-        public int[] Add2IntegersAndReturnIndicesByTarget(int target)
+        public int[] Add2IntegersAndReturnIndicesByTargetKnown(int target)
         {
             const int a = 2;
             const int b = 7;
@@ -50,6 +41,27 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
                 default:
                     return null;
             }
+        }
+
+        public Tuple<int, int> Add2IntegersAndReturnIndicesByTargetUnknown(IList<int> list, int sum)
+        {
+            var hs = new HashSet<int>();
+            list.ToList().ForEach(x => hs.Add(x));
+
+            for (var i = 0; i < hs.Count; i++)
+            {
+                var diff = sum - list[i];
+
+                //if you cant find the difference between the target sum and the list multipliers
+                if (!hs.Contains(diff)) continue;
+
+                var index = list.IndexOf(diff);
+
+                return new Tuple<int, int>(i, index);
+            }
+
+            //couldnt find the target sum
+            return null;
         }
 
 

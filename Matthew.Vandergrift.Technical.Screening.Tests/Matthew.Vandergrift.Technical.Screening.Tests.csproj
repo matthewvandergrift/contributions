@@ -114,6 +114,7 @@
     <Compile Include="Areas\Math\MathTest.cs" />
     <Compile Include="Areas\Pointers\PointerTest.cs" />
     <Compile Include="Areas\Regression\RegressionTests.cs" />
+    <Compile Include="Areas\Regression\BTreeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />

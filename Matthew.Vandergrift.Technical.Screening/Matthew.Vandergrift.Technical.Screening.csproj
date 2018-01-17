@@ -161,6 +161,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Array\ArrayOperations.cs" />
+    <Compile Include="Areas\Regression\BTree.cs" />
+    <Compile Include="Areas\Regression\BTreeNode.cs" />
     <Compile Include="Areas\Delegates\DelegateSimple.cs" />
     <Compile Include="Areas\Delegates\FileLogger.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
@@ -193,7 +195,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Areas\Lambda\LambdaExpressions.cs" />
     <Compile Include="Areas\LinkedList\GenericLinkedList.cs" />
-    <Compile Include="Areas\LinkedList\Node.cs" />
+    <Compile Include="Areas\LinkedList\LinkedListNode.cs" />
     <Compile Include="Areas\Math\MathProblemsOutsideTheBox.cs" />
     <Compile Include="Areas\Pointers\Pointer.cs" />
     <Compile Include="Areas\Regression\RegressionQuick.cs" />

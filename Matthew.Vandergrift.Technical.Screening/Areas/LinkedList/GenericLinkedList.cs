@@ -3,12 +3,12 @@
     public class GenericLinkedList<T>
     {
         // The list is initially empty.
-        private Node _head = null;
+        private LinkedListNode _head = null;
 
         // Add a node at the beginning of the list with t as its data value.
         public void AddNode(T t)
         {
-            var newNode = new Node
+            var newNode = new LinkedListNode
             {
                 Next = _head,
                 Data = t

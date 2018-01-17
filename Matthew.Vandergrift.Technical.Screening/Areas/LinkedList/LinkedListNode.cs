@@ -2,9 +2,9 @@
 
 namespace Matthew.Vandergrift.Technical.Screening.Areas.LinkedList
 {
-    public class Node
+    public class LinkedListNode
     {
-        public Node Next;
+        public LinkedListNode Next;
         public object Data;
     }
 }

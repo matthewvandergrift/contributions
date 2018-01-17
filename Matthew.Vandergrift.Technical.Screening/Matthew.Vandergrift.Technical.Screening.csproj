@@ -193,6 +193,7 @@
     <Compile Include="Areas\Lambda\LambdaExpressions.cs" />
     <Compile Include="Areas\LinkedList\GenericLinkedList.cs" />
     <Compile Include="Areas\LinkedList\Node.cs" />
+    <Compile Include="Areas\Math\MathProblemsOutsideTheBox.cs" />
     <Compile Include="Areas\Pointers\Pointer.cs" />
     <Compile Include="Areas\Regression\RegressionQuick.cs" />
     <Compile Include="Controllers\HomeController.cs" />

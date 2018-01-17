@@ -12,7 +12,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
         {
             //Arrange
             // Test with a non-empty list of integers.
-            GenericLinkedList<int> gll = new GenericLinkedList<int>();
+            var gll = new GenericLinkedList<int>();
 
             var expected = 5;
 
@@ -21,7 +21,8 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
             gll.AddNode(expected);
             gll.AddNode(4);
             gll.AddNode(3);
-            int actual = gll.GetFirstAdded();
+
+            var actual = gll.GetFirstAdded();
 
             //Assert
             // The following line should equal 5.

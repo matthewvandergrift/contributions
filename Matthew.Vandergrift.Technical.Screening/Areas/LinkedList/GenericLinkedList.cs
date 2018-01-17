@@ -2,8 +2,7 @@
 {
     public class GenericLinkedList<T>
     {
-        // The list is initially empty.
-        private LinkedListNode _head = null;
+        private LinkedListNode _head;
 
         // Add a node at the beginning of the list with t as its data value.
         public void AddNode(T t)
@@ -23,17 +22,16 @@
         {
             // The value of temp is returned as the value of the method. 
             // The following declaration initializes temp to the appropriate 
-            // default value for type T. The default value is returned if the 
-            // list is empty.
-            var temp = default(T);
+            // default value for type T. The default value is returned if the list is empty.
+            var value = default(T);
 
             var current = _head;
             while (current != null)
             {
-                temp = (T) current.Data;
+                value = (T) current.Data;
                 current = current.Next;
             }
-            return temp;
+            return value;
         }
     }
 }

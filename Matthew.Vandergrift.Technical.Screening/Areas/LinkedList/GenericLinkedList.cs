@@ -30,7 +30,7 @@
             var current = _head;
             while (current != null)
             {
-                temp = current.Data;
+                temp = (T) current.Data;
                 current = current.Next;
             }
             return temp;

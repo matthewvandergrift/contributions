@@ -2,14 +2,6 @@
 {
     public class GenericLinkedList<T>
     {
-        private class Node
-        {
-            // Each node has a reference to the next node in the list.
-            public Node Next;
-            // Each node holds a value of type T.
-            public T Data;
-        }
-
         // The list is initially empty.
         private Node _head = null;
 
@@ -33,9 +25,9 @@
             // The following declaration initializes temp to the appropriate 
             // default value for type T. The default value is returned if the 
             // list is empty.
-            T temp = default(T);
+            var temp = default(T);
 
-            Node current = _head;
+            var current = _head;
             while (current != null)
             {
                 temp = current.Data;

@@ -1,20 +1,20 @@
-﻿using Matthew.Vandergrift.Technical.Screening.Areas.LinkedList;
+﻿using Matthew.Vandergrift.Technical.Screening.Areas.LinkedList.Singly;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
+namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList.Singly
 {
     [TestClass]
-    public class LinkedListTest
+    public class SinglyLinkedListTest
     {
-        private static GenericLinkedList<int> GetGenericLinkedList()
+        private static SinglyLinkedList<int> GetGenericLinkedList()
         {
             // Test with a non-empty list of integers.
-            var gll = new GenericLinkedList<int>();
+            var gll = new SinglyLinkedList<int>();
 
             //fill the LinkedList
-            gll.AddNode(30);
-            gll.AddNode(20);
-            gll.AddNode(10);
+            gll.AddNodeFromFront(30);
+            gll.AddNodeFromFront(20);
+            gll.AddNodeFromFront(10);
 
             return gll;
         }
@@ -27,7 +27,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
             var gll = GetGenericLinkedList();
 
             //Act 
-            var actual = gll.GetFirstAddedData();
+            var actual = gll.GetFirstAddedFromFrontData();
 
             //Assert
             // The following line should equal 20.
@@ -43,7 +43,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
             var gll = GetGenericLinkedList();
 
             //Act 
-            var actual = gll.GetNodeAt(ordinal);
+            var actual = gll.GetNodeAtFirstAddedFromFront(ordinal);
 
             //Assert
             // The following line should equal 30.
@@ -62,10 +62,26 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
             //Reverse the list
             gll.Reverse();
             //Now fetch the node
-            var actual = gll.GetNodeAt(ordinal);
+            var actual = gll.GetNodeAtFirstAddedFromFront(ordinal);
 
             //Assert
             // The following line should equal 10.
+            Assert.AreEqual<int>(expected, (int)actual.Data);
+        }
+
+        [TestMethod]
+        public void AddNodeFromLast()
+        {
+            //Arrange
+            var expected = 40;
+            var gll = GetGenericLinkedList();
+
+            //Act 
+            gll.AddNodeFromLast(40);
+            var actual = gll.GetLastAddedFromFrontNode();
+
+            //Assert
+            // The following line should equal 40.
             Assert.AreEqual<int>(expected, (int)actual.Data);
         }
     }

@@ -110,7 +110,8 @@
     <Compile Include="Areas\Arrays\ArrayOperationsTest.cs" />
     <Compile Include="Areas\Delegate\DelegateSimpleTest.cs" />
     <Compile Include="Areas\Lambda\LambdaExpressionsTest.cs" />
-    <Compile Include="Areas\LinkedList\LinkedListTest.cs" />
+    <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedListTest.cs" />
+    <Compile Include="Areas\LinkedList\Singly\SinglyLinkedListTest.cs" />
     <Compile Include="Areas\Math\MathTest.cs" />
     <Compile Include="Areas\Pointers\PointerTest.cs" />
     <Compile Include="Areas\Regression\RegressionTests.cs" />

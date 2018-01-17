@@ -1,5 +1,4 @@
-﻿using System;
-using Matthew.Vandergrift.Technical.Screening.Areas.LinkedList;
+﻿using Matthew.Vandergrift.Technical.Screening.Areas.LinkedList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
@@ -40,7 +39,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
         {
             //Arrange
             var expected = 30;
-            var ordinal = 2;
+            var ordinal = 1;
             var gll = GetGenericLinkedList();
 
             //Act 
@@ -48,6 +47,25 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList
 
             //Assert
             // The following line should equal 30.
+            Assert.AreEqual<int>(expected, (int)actual.Data);
+        }
+
+        [TestMethod]
+        public void GetSecondAddedReversedListUsingExpression()
+        {
+            //Arrange
+            var expected = 10;
+            var ordinal = 1;
+            var gll = GetGenericLinkedList();
+
+            //Act 
+            //Reverse the list
+            gll.Reverse();
+            //Now fetch the node
+            var actual = gll.GetNodeAt(ordinal);
+
+            //Assert
+            // The following line should equal 10.
             Assert.AreEqual<int>(expected, (int)actual.Data);
         }
     }

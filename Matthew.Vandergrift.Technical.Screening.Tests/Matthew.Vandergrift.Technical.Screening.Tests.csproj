@@ -111,6 +111,7 @@
     <Compile Include="Areas\Lambda\LambdaExpressionsTest.cs" />
     <Compile Include="Areas\LinkedList\LinkedListTest.cs" />
     <Compile Include="Areas\Pointers\PointerTest.cs" />
+    <Compile Include="Areas\Regression\RegressionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
@@ -127,6 +128,7 @@
       <Name>Matthew.Vandergrift.Technical.Screening</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

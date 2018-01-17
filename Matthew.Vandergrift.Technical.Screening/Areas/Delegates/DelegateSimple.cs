@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Matthew.Vandergrift.Technical.Screening.Areas.Deletegates
+﻿namespace Matthew.Vandergrift.Technical.Screening.Areas.Delegates
 {
     public class DelegateSimple
     {

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
+﻿using System.IO;
 
-namespace Matthew.Vandergrift.Technical.Screening.Areas.Deletegates
+namespace Matthew.Vandergrift.Technical.Screening.Areas.Delegates
 {
     public class FileLogger
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using Matthew.Vandergrift.Technical.Screening.Areas.Deletegates;
+using Matthew.Vandergrift.Technical.Screening.Areas.Delegates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Delegate

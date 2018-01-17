@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Matthew.Vandergrift.Technical.Screening.Areas.LinkedList
+﻿namespace Matthew.Vandergrift.Technical.Screening.Areas.LinkedList
 {
     public class GenericLinkedList<T>
     {
@@ -16,15 +11,17 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.LinkedList
         }
 
         // The list is initially empty.
-        private Node head = null;
+        private Node _head = null;
 
         // Add a node at the beginning of the list with t as its data value.
         public void AddNode(T t)
         {
-            Node newNode = new Node();
-            newNode.Next = head;
-            newNode.Data = t;
-            head = newNode;
+            var newNode = new Node
+            {
+                Next = _head,
+                Data = t
+            };
+            _head = newNode;
         }
 
         // The following method returns the data value stored in the last node in
@@ -38,7 +35,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.LinkedList
             // list is empty.
             T temp = default(T);
 
-            Node current = head;
+            Node current = _head;
             while (current != null)
             {
                 temp = current.Data;

@@ -161,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Array\ArrayOperations.cs" />
+    <Compile Include="Areas\LinkedList\GenericLinkedListExpression.cs" />
     <Compile Include="Areas\Regression\BTree.cs" />
     <Compile Include="Areas\Regression\BTreeNode.cs" />
     <Compile Include="Areas\Delegates\DelegateSimple.cs" />

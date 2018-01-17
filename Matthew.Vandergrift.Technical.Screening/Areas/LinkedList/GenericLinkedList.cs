@@ -15,23 +15,45 @@
             _head = newNode;
         }
 
-        // The following method returns the data value stored in the last node in
-        // the list. If the list is empty, the default value for type T is
-        // returned.
-        public T GetFirstAdded()
+        public LinkedListNode GetHead()
         {
-            // The value of temp is returned as the value of the method. 
-            // The following declaration initializes temp to the appropriate 
-            // default value for type T. The default value is returned if the list is empty.
-            var value = default(T);
+            return _head;
+        }
+
+        public T GetFirstAddedData()
+        {
+            return (T)GetHead().Next.Data;
+        }
+
+        public LinkedListNode GetFirstAddedNode()
+        {
+            return GetHead().Next;
+        }
+
+        public LinkedListNode GetLastAddedNode()
+        {
+            var temp = _head;
+            while (temp.Next != null)
+            {
+                temp = temp.Next;
+            }
+            return temp;
+        }
+
+        public void Reverse()
+        {
+            LinkedListNode prev = null;
 
             var current = _head;
             while (current != null)
             {
-                value = (T) current.Data;
-                current = current.Next;
+                var temp = current.Next;
+                current.Next = prev;
+                prev = current;
+                current = temp;
             }
-            return value;
+
+            _head = prev;
         }
     }
 }

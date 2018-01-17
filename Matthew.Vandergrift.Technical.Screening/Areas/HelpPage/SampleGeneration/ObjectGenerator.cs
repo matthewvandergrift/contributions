@@ -215,10 +215,10 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.HelpPage
 
         private static object GenerateArray(Type arrayType, int size, Dictionary<Type, object> createdObjectReferences)
         {
-            Type type = arrayType.GetElementType();
-            Array result = Array.CreateInstance(type, size);
-            bool areAllElementsNull = true;
-            ObjectGenerator objectGenerator = new ObjectGenerator();
+            var type = arrayType.GetElementType();
+            var result = System.Array.CreateInstance(type, size);
+            var areAllElementsNull = true;
+            var objectGenerator = new ObjectGenerator();
             for (int i = 0; i < size; i++)
             {
                 object element = objectGenerator.GenerateObject(type, createdObjectReferences);
@@ -271,7 +271,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.HelpPage
 
         private static object GenerateEnum(Type enumType)
         {
-            Array possibleValues = Enum.GetValues(enumType);
+            var possibleValues = Enum.GetValues(enumType);
             if (possibleValues.Length > 0)
             {
                 return possibleValues.GetValue(0);

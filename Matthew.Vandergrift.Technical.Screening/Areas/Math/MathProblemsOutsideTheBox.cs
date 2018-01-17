@@ -1,9 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
 {
     public class MathProblemsOutsideTheBox
     {
+        //Had one today.Looked like problems for 10 year olds or I didn't get what they were looking for. 
+        //(1) A function to compute minimum of unsorted numbers in an array of size N. this is a simple loop to find the min.How many times the assignment is executed?
+        //(2) Find and fix the bugs - this function is to remove head of a singly linked list.
+
+        //void RemoveHead(node* head)
+        //{
+        //    free(head);
+        //    head = head->next;
+        //}
+        //(3) Design a printserver. (there were some criteria)
+
+        //- Bad_MoFo June 21, 2014 | Flag
+
+        
+
+
         public long Divide2IntegersWithoutOperators()
         {
             return 0;

@@ -160,6 +160,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Array\ArrayOperations.cs" />
     <Compile Include="Areas\Delegates\DelegateSimple.cs" />
     <Compile Include="Areas\Delegates\FileLogger.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />

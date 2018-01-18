@@ -163,6 +163,7 @@
     <Compile Include="Areas\Array\ArrayOperations.cs" />
     <Compile Include="Areas\BugHunt\BugFixes.cs" />
     <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedList.cs" />
+    <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedListExpression.cs" />
     <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedListNode.cs" />
     <Compile Include="Areas\LinkedList\Singly\SinglyLinkedListExpression.cs" />
     <Compile Include="Areas\Regression\BTree.cs" />

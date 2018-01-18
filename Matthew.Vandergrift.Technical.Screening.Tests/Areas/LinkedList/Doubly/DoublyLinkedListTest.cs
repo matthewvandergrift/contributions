@@ -34,5 +34,27 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList.Doubly
             // The following line should equal 10.
             Assert.AreEqual<int>(expected, (int)actual.Data);
         }
+
+        [TestMethod]
+        public void RemoveAnItemFromTheLinkedList()
+        {
+            //Arrange
+            var expected = new DoublyLinkedList<int>();
+
+            //fill the LinkedList
+            expected.AddNodeFromFront(30);
+            //miss 20 because we are gonna remove that one
+            //expected.AddNodeFromFront(20);
+            expected.AddNodeFromFront(10);
+
+            var gll = GetGenericLinkedList();
+
+            //Act 
+            var actual = gll.DeleteNodeAtPositionStartingFromFront(2);
+
+            //Assert
+            // The following line should equal 10.
+            Assert.IsTrue((int)expected.GetHead().Next.Data == (int)actual.GetHead().Next.Data);
+        }
     }
 }

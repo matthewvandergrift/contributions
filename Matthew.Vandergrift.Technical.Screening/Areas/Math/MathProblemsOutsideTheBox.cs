@@ -12,9 +12,20 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
         //(3) Design a printserver. (there were some criteria)
 
 
-        public long Divide2IntegersWithoutOperators()
+        public string Divide2IntegersWithoutDivideOrModulusOperators(int dividend, int divisor)
         {
-            return 0;
+            var quotient = 0;
+            var value = dividend;
+
+            while (value > divisor)
+            {
+                quotient += 1;
+                value -= divisor;
+            }
+
+            var remainder = value;
+
+            return $"{dividend} goes into {divisor}: {quotient} time(s) with {remainder} remaining.";
         }
 
         public int[] Add2IntegersAndReturnIndicesByTargetKnown(int target)

@@ -48,5 +48,21 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Math
             //Assert
             Assert.AreEqual(result, new Tuple<int, int>(0, 1));
         }
+
+        [TestMethod]
+        public void Divide2IntegersWithoutUsingDivideOrModulusOperator()
+        {
+            //Arrange
+            var dividend = 13;
+            var divisor = 4;
+            var expected = "13 goes into 4: 3 time(s) with 1 remaining.";
+            var mathProblems = new MathProblemsOutsideTheBox();
+
+            //Act
+            var result = mathProblems.Divide2IntegersWithoutDivideOrModulusOperators(dividend, divisor);
+
+            //Assert
+           Assert.AreEqual(expected,result);
+        }
     }
 }

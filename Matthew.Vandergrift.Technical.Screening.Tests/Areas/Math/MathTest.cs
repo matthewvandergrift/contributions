@@ -22,17 +22,31 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Math
         }
 
         [TestMethod]
-        public void Add2IntegersAndReturnIndicesOfPartsByTargetUnknown()
+        public void Add2IntegersAndReturnIndicesOfPartsByTargetUnknownForI()
         {
             //Arrange
             var mathProblems = new MathProblemsOutsideTheBox();
             var list = new List<int>() {2, 7, 11, 15};
 
             //Act 
-            var result = mathProblems.Add2IntegersAndReturnIndicesByTargetUnknown(list, 9);
+            var result = mathProblems.Add2IntegersAndReturnIndicesByTargetUnknownForI(list, 9);
 
             //Assert
             Assert.AreEqual(result, new Tuple<int,int>( 0, 1 ));
+        }
+
+        [TestMethod]
+        public void Add2IntegersAndReturnIndicesOfPartsByTargetUnknownForLoop()
+        {
+            //Arrange
+            var mathProblems = new MathProblemsOutsideTheBox();
+            var list = new List<int>() { 2, 7, 11, 15 };
+
+            //Act 
+            var result = mathProblems.Add2IntegersAndReturnIndicesByTargetUnknownForLoop(list, 9);
+
+            //Assert
+            Assert.AreEqual(result, new Tuple<int, int>(0, 1));
         }
     }
 }

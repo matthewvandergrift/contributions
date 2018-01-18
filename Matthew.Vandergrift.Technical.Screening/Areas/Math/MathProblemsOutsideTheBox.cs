@@ -43,7 +43,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
             }
         }
 
-        public Tuple<int, int> Add2IntegersAndReturnIndicesByTargetUnknown(IList<int> list, int sum)
+        public Tuple<int, int> Add2IntegersAndReturnIndicesByTargetUnknownForI(IList<int> list, int sum)
         {
             var hs = new HashSet<int>();
             list.ToList().ForEach(x => hs.Add(x));
@@ -64,6 +64,28 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Math
             return null;
         }
 
+        public Tuple<int, int> Add2IntegersAndReturnIndicesByTargetUnknownForLoop(IList<int> list, int sum)
+        {
+            //var list = new List<int>() {2, 7, 11, 15};
+            var hs = new HashSet<int>();
+            list.ToList().ForEach(x => hs.Add(x));
 
+            var i = -1;
+            foreach (var item in list)
+            {
+                i+=1;
+
+                var diff = sum - item;
+
+                if (!hs.Contains(diff))
+                    continue;
+
+                var index = list.IndexOf(diff);
+
+                return new Tuple<int, int>(i, index);
+            }
+
+            return null;
+        }
     }
 }

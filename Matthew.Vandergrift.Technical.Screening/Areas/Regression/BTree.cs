@@ -25,7 +25,6 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Regression
             //if the root is null then we are in the beginning, set the root to the new node from the new value
             if (Root == null)
                 Root = newNode;
-
             //if the root is NOT null then we are traversing and setting nodes according to left less than, right else
             else
             {

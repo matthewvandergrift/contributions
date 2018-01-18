@@ -5,12 +5,12 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Regression
     public class BTree
     {
         public BTreeNode Root;
-        public StringBuilder output;
+        public StringBuilder Output;
 
         public BTree()
         {
             Root = null;
-            output = new StringBuilder();
+            Output = new StringBuilder();
         }
 
         public BTreeNode ReturnRoot()
@@ -65,111 +65,30 @@ namespace Matthew.Vandergrift.Technical.Screening.Areas.Regression
 
         public void PreOrder(BTreeNode node)
         {
-            if (node != null)
-            {
-                output.Append($"{node.Value} ");
+            if (node == null) return;
+            Output.Append($"{node.Value} ");
 
-                PreOrder(node.Left);
-                PreOrder(node.Right);
-            }
+            PreOrder(node.Left);
+            PreOrder(node.Right);
         }
 
         public void InOrder(BTreeNode node)
         {
-            if (node != null)
-            {
-                InOrder(node.Left);
-                output.Append($"{node.Value} ");
-                InOrder(node.Right);
-            }
+            if (node == null) return;
+
+            InOrder(node.Left);
+            Output.Append($"{node.Value} ");
+            InOrder(node.Right);
         }
 
         public void PostOrder(BTreeNode node)
         {
-            if (node != null)
-            {
-                PostOrder(node.Left);
-                PostOrder(node.Right);
-                output.Append($"{node.Value} ");
-            }
+            if (node == null) return;
+
+            PostOrder(node.Left);
+            PostOrder(node.Right);
+            Output.Append($"{node.Value} ");
         }
 
-        //public object DeleteNode(object data)
-
-        //{
-
-        //    TNode tempDelete = this.GetNode(data);
-
-        //    if (tempDelete != null)
-
-        //    {
-
-        //        if ((tempDelete.Left == null) && (tempDelete.Right == null)) //Its a Leaf node
-
-        //        {
-
-        //            tempParent = tempDelete.Parent;
-
-        //            if (tempDelete == tempParent.Left) //Justremove by making it null
-
-        //                tempParent.Left = null;
-
-        //            else
-
-        //                tempParent.Right = null;
-
-        //        }
-
-        //        else if ((tempDelete.Left == null) || (tempDelete.Right == null)) //It has either Left orRight child
-
-        //        {
-
-        //            tempChild = tempDelete.Left == null ? tempDelete.Right : tempDelete.Left; //Get the child
-
-        //            tempParent = tempDelete.Parent; //Getthe parent
-
-        //            if (tempDelete == tempParent.Left) //Makeparent points to it's child so it will automatically deleted like Linked list
-
-        //                tempParent.Left = tempChild;
-
-        //            else
-
-        //                tempParent.Right = tempChild;
-
-        //        }
-
-        //        else if ((tempDelete.Left != null) || (tempDelete.Right != null)) //It has both Left andRight child
-
-        //        {
-
-        //            TNodepredNode = this.GetNode(this.TreePredecessor_Ite(data));  //Findit's predecessor
-
-        //            if (predNode.Left != null) // Predecessor node canhave no or left child. Do below two steps only if it has left child
-
-        //            {
-
-        //                tempChild = predNode.Left;
-
-        //                predNode.Parent.Right = tempChild; //Assignleft child of predecessor to it's Parent's right.
-
-        //            }
-
-        //            tempDelete.Data = predNode.Data; //Replace the value of predecessor nodeto the value of to be deleted node
-
-        //            //predNode = null; //Remove predecessornode as it's no longer required.
-
-        //        }
-
-
-
-        //        return data + " Deleted";
-
-        //    }
-
-        //    else
-
-        //        return "Please enter the valid tree element!";
-
-        //}
     }
 }

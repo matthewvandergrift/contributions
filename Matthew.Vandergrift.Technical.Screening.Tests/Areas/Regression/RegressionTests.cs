@@ -13,7 +13,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Regression
             var regression = new RegressionQuick();
 
             //Act
-            var result = regression.CalculateFibonacci(6);
+            var result = regression.CalculateFibonacci(5);
 
             //Assert
             Assert.IsTrue(result == 5);

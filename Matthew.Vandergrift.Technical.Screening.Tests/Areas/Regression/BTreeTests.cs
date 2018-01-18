@@ -30,7 +30,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Regression
 
             //Act
             tree.PreOrder(tree.ReturnRoot());
-            var result = tree.output.ToString();
+            var result = tree.Output.ToString();
 
             //Assert
             Assert.IsTrue(result == expected);
@@ -45,7 +45,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Regression
 
             //Act
             tree.InOrder(tree.ReturnRoot());
-            var result = tree.output.ToString();
+            var result = tree.Output.ToString();
 
             //Assert
             Assert.IsTrue(result == expected);
@@ -60,7 +60,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.Regression
 
             //Act
             tree.PostOrder(tree.ReturnRoot());
-            var result = tree.output.ToString();
+            var result = tree.Output.ToString();
 
             //Assert
             Assert.IsTrue(result == expected);

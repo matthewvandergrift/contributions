@@ -161,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Array\ArrayOperations.cs" />
+    <Compile Include="Areas\BugHunt\BugFixes.cs" />
     <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedList.cs" />
     <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedListNode.cs" />
     <Compile Include="Areas\LinkedList\Singly\SinglyLinkedListExpression.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Areas\LinkedList\Singly\SinglyLinkedListNode.cs" />
     <Compile Include="Areas\Math\MathProblemsOutsideTheBox.cs" />
     <Compile Include="Areas\Pointers\Pointer.cs" />
+    <Compile Include="Areas\Regression\NumbersProblem.cs" />
     <Compile Include="Areas\Regression\RegressionQuick.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -267,6 +269,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\DesignPatterns\Behavioral\" />
+    <Folder Include="Areas\DesignPatterns\Creational\" />
+    <Folder Include="Areas\DesignPatterns\Structural\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

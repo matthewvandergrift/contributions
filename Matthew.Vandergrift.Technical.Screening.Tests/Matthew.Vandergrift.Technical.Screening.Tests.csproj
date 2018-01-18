@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Arrays\ArrayOperationsTest.cs" />
+    <Compile Include="Areas\BugHunt\BugHuntTest.cs" />
     <Compile Include="Areas\Delegate\DelegateSimpleTest.cs" />
     <Compile Include="Areas\Lambda\LambdaExpressionsTest.cs" />
     <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedListTest.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Areas\Pointers\PointerTest.cs" />
     <Compile Include="Areas\Regression\RegressionTests.cs" />
     <Compile Include="Areas\Regression\BTreeTests.cs" />
+    <Compile Include="Areas\Regression\NumbersProblemTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
@@ -132,7 +134,9 @@
       <Name>Matthew.Vandergrift.Technical.Screening</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Areas\NewFolder1\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

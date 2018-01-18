@@ -43,7 +43,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList.Singly
             var gll = GetGenericLinkedList();
 
             //Act 
-            var actual = gll.GetNodeAtFirstAddedFromFront(ordinal);
+            var actual = gll.GetNodeAtPositionAddedFromFront(ordinal);
 
             //Assert
             // The following line should equal 30.
@@ -62,7 +62,7 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList.Singly
             //Reverse the list
             gll.Reverse();
             //Now fetch the node
-            var actual = gll.GetNodeAtFirstAddedFromFront(ordinal);
+            var actual = gll.GetNodeAtPositionAddedFromFront(ordinal);
 
             //Assert
             // The following line should equal 10.
@@ -83,6 +83,21 @@ namespace Matthew.Vandergrift.Technical.Screening.Tests.Areas.LinkedList.Singly
             //Assert
             // The following line should equal 40.
             Assert.AreEqual<int>(expected, (int)actual.Data);
+        }
+
+        [TestMethod]
+        public void GetMinimumValueFromList()
+        {
+            //Arrange
+            var expected = 10;
+            var gll = GetGenericLinkedList();
+
+            //Act 
+            var actual = gll.GetMinimumValueNodeFromFront();
+
+            //Assert
+            // The following line should equal 10.
+            Assert.AreEqual<int>(expected, actual);
         }
     }
 }

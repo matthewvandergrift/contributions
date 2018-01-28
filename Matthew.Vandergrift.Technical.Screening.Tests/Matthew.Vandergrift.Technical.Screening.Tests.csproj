@@ -108,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Arrays\ArrayOperationsTest.cs" />
-    <Compile Include="Areas\BugHunt\BugHuntTest.cs" />
+    <Compile Include="Areas\Strings\StringsTest.cs" />
     <Compile Include="Areas\Delegate\DelegateSimpleTest.cs" />
     <Compile Include="Areas\Lambda\LambdaExpressionsTest.cs" />
     <Compile Include="Areas\LinkedList\Doubly\DoublyLinkedListTest.cs" />

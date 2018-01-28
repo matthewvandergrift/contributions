@@ -118,6 +118,7 @@
     <Compile Include="Areas\Regression\RegressionTests.cs" />
     <Compile Include="Areas\Regression\BTreeTests.cs" />
     <Compile Include="Areas\Regression\NumbersProblemTest.cs" />
+    <Compile Include="Areas\Regression\BubbleSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
@@ -134,9 +135,7 @@
       <Name>Matthew.Vandergrift.Technical.Screening</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Areas\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
